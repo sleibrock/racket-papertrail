@@ -1,4 +1,4 @@
-# papertrail.rkt
+# racket-papertrail - a Papertrail Racket library 
 
 A [Papertrail](https://papertrailapp.com/) library for [Racket](https://racket-lang.org/).
 

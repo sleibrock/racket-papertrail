@@ -31,8 +31,7 @@ https://sematext.com/blog/what-is-syslog-daemons-message-formats-and-protocols/
          send-messages-to-output-port
          
          ; primary functions
-         (contract-out
-          [init-papertrail (-> string? number? )
+         init-papertrail
          )
 
 
