@@ -4,6 +4,10 @@
 papertrail/main.rkt
 
 A library used to send syslog messages to Papertrailapp.com
+
+Resources used:
+https://stackify.com/syslog-101/
+https://sematext.com/blog/what-is-syslog-daemons-message-formats-and-protocols/
 |#
 
 ; Require our base libraries
@@ -27,7 +31,8 @@ A library used to send syslog messages to Papertrailapp.com
          send-messages-to-output-port
          
          ; primary functions
-         init-papertrail
+         (contract-out
+          [init-papertrail (-> string? number? )
          )
 
 
