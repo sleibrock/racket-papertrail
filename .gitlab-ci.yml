@@ -1,0 +1,19 @@
+image: jackfirth/racket:7.0
+
+variables:
+  LC_ALL: C.UTF-8
+  FONTCONFIG_PATH: /etc/fonts
+
+
+before_script:
+  - export FONTCONFIG_PATH=/etc/fonts
+  - apt-get update -y
+  - apt-get upgrade -y
+  - apt-get install ttf-liberation -y
+  - raco pkg install --deps search-auto plot
+
+test:
+  script:
+  - make test
+  only:
+  - master
