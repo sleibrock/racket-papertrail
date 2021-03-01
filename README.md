@@ -14,6 +14,16 @@ The aim of `racket-papertrail` is to send log messages from a Racket application
 
 `papertrail.rkt` can be installed through the standard Racket package manager `raco`.
 
-## Building / Testing
 
-More coming soon.
+## Using Papertrail
+
+Create a new `paper` struct with `new-papertrail`, then initialize a logger through `create-paper-logger`.
+```
+(require papertrail)
+
+(define p (new-papertrail "logs4.papertrailapp.com" 12345 "racket"))
+(define log (create-paper-logger p))
+
+(log "Hello world!")
+(log "This is a fatal warning" "FATAL")
+```
