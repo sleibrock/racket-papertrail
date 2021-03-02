@@ -93,6 +93,8 @@ https://sematext.com/blog/what-is-syslog-daemons-message-formats-and-protocols/
       (define payload
         (format "<1>1 ~aZ ~a ~a - - - ~a"
                 (iso8601-datestring) sys-name type msg))
+      (when [stdout-logging?]
+        (displayln payload))
       (udp-send sock (string->bytes/utf-8 payload))))
   
 
